@@ -1,13 +1,14 @@
 let myMap = L.map('mapid').setView([51.505, -0.09], 13);
 
 
-// applyHeatmap = (boundsArray) => {
-//     console.log(boundsArray, "Hello")
-//     let heat = L.heatLayer([
-//         [50.5, 30.5], // lat, lng, intensity
-//         [50.6, 30.4],
-//     ], {radius: 25}).addTo(myMap);
-// }
+applyHeatmap = (boundsArray) => {
+    console.log(boundsArray.length)
+    let newBounds = boundsArray.map(datum => 
+        [datum["longitude"], datum["latitude"], 1]
+    )
+    // Apply data points within newBounds to the heatLayer.
+    L.heatLayer(newBounds, {radius: 25}).addTo(myMap);
+}
 
 queryBounds = () => {
     // getBounds returns the latitude and longitude range that the

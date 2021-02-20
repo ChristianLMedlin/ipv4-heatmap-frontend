@@ -1,14 +1,18 @@
 let myMap = L.map('mapid').setView([51.505, -0.09], 13);
-
+// Create an empty heat layer.
+heat = L.heatLayer([], {radius: 25}).addTo(myMap);
 
 applyHeatmap = (boundsArray) => {
     console.log(boundsArray.length)
     let newBounds = boundsArray.map(datum => 
         [datum["longitude"], datum["latitude"], 1]
-    )
+    );
+
+    // Remove old data points when called again.
+    myMap.removeLayer(heat)
     // Apply data points within newBounds to the heatLayer.
-    L.heatLayer(newBounds, {radius: 25}).addTo(myMap);
-}
+    heat = L.heatLayer(newBounds, {radius: 25}).addTo(myMap);
+};
 
 queryBounds = () => {
     // getBounds returns the latitude and longitude range that the
@@ -21,13 +25,14 @@ queryBounds = () => {
     let west = bounds.getWest()
     let east = bounds.getEast()
 
+    console.log(south, north, west, east)
     // Interpolate our bounds into the fetch request. Convert response to JSON
     // and apply the data to our map with applyHeatmap.
     fetch("https://ipv4-heatmap-christian-medlin.herokuapp.com/api/locationProvider/"
             + `?longRange=${south},${north}`
             + `&latRange=${west},${east}`)
         .then(response => response.json())
-        .then (data => applyHeatmap(data))
+        .then(data => applyHeatmap(data))
         .catch(rejected => console.log(rejected))
 }
 
@@ -41,6 +46,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: apiToken
 }).addTo(myMap);
 
-myMap.on("click", e => {
+myMap.on("moveend", e => {
     queryBounds()
 })

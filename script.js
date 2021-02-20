@@ -1,6 +1,4 @@
-let myMap = L.map('mapid').setView([51.505, -0.09], 13);
-// Create an empty heat layer.
-heat = L.heatLayer([], {radius: 25}).addTo(myMap);
+let myMap = L.map('mapid')
 
 applyHeatmap = (boundsArray) => {
     console.log(boundsArray.length)
@@ -49,3 +47,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 myMap.on("moveend", e => {
     queryBounds()
 })
+
+myMap.setView([25.505, 45.09], 5);
+// Create an empty heat layer.
+heat = L.heatLayer([], {radius: 25}).addTo(myMap);

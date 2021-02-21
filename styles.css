@@ -1,3 +1,37 @@
-#mapid {
-    height: 80vh;
+* {
+    margin: 0;
+    padding: 0;
 }
+
+#hotspot-header {
+    height: 2vh;
+    font-size: 18px;
+    text-align: center;
+    background-color: #e8eeff;
+}
+
+#location-selection-parent {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.country-button {
+    width: 25%;
+    font-size: 20px;
+    cursor: pointer;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-top: .5px solid;
+    border-bottom: none;
+    border-color: #7e8ebf;
+    background-color: #e8eeff;
+    outline: none;
+}
+
+#mapid {
+    height: 91vh;
+}
+
+

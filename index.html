@@ -6,20 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>IPv4 Heatmap</title>
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin=""/>
+    <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+    <!-- Leaflet.heat JavaScript -->
     <script src="leaflet.heat/dist/leaflet-heat.js"></script>
+
     <!-- local CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- import the webpage's javascript file -->
+    <!-- local JavaScript -->
     <script src="script.js" defer></script>
     </head>
 
     <body>
+        <header id="hotspot-header">View Hotspots</header>
+        <div id="location-selection-parent">
+            <button id="svalbard" class="country-button">Svalbard</button>
+            <button id="somalia" class="country-button">Somalia</button>
+            <button id="saudi-arabia" class="country-button">Saudi Arabia</button>
+            <button id="egypt" class="country-button">Egypt</button>
+        </div>
         <div id="mapid"></div>
     </body>
 </html>

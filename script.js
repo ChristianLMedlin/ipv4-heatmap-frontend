@@ -28,7 +28,8 @@ queryBounds = () => {
     // and apply the data to our map with applyHeatmap.
     fetch("https://ipv4-heatmap-christian-medlin.herokuapp.com/api/locationProvider/"
             + `?longRange=${south},${north}`
-            + `&latRange=${west},${east}`)
+            + `&latRange=${west},${east}`
+            + `&latLongOnly=true`)
         .then(response => response.json())
         .then(data => applyHeatmap(data))
         .catch(rejected => console.log(rejected))

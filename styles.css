@@ -29,6 +29,7 @@
     background-color: rgba(232, 238, 255, 0.88);
     outline: none;
     border-radius: 5px;
+    font-weight: 550;
 }
 
 .country-button:hover {

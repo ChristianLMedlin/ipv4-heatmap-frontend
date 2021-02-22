@@ -33,7 +33,7 @@
     height: 100vh;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     #location-selection-parent {
         flex-wrap: wrap;
         margin-left: 15%;

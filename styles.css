@@ -36,11 +36,13 @@
 @media only screen and (max-width: 600px) {
     #location-selection-parent {
         flex-wrap: wrap;
-        margin-left: 8%
+        margin-left: 15%;
+        padding-right: 5%;
+        justify-content: start;
     }
 
     .country-button {
-      width: 50%;
+      width: 45%;
     }
   }
 

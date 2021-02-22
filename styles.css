@@ -11,7 +11,7 @@
 }
 
 #location-selection-parent {
-    height: 7vh;
+    height: 5vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -31,7 +31,7 @@
 }
 
 #mapid {
-    height: 91vh;
+    height: 93vh;
 }
 
 

@@ -26,7 +26,7 @@
     font-size: 20px;
     cursor: pointer;
     border: 1px solid #7e8ebf;
-    background-color: #e8eeff;
+    background-color: rgba(232, 238, 255, 0.88);
     outline: none;
     border-radius: 5px;
 }

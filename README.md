@@ -1,3 +1,5 @@
+### The PostgreSQL instance has been temporarily removed while I work to reduce the volume to comply with Heroku's free tier.
+### Please check out my code in the meantime!
 Hosted Link: https://christianlmedlin.github.io/ipv4-heatmap-frontend/<br/>
 Back End Repository: https://github.com/ChristianLMedlin/ipv4-heatmap<br/>
 API Hosted on Heroku: https://ipv4-heatmap-christian-medlin.herokuapp.com/api/locationProvider/<br/>
